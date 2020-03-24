@@ -24,7 +24,7 @@ COPY . .
 
 # Build the binary.
 #RUN GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -o /go/bin/wolfmqttbridge
-RUN  GOARCH=arm64 GOOS=linux go build -o /wolfmqttbridge
+RUN GOARCH=arm GOOS=linux go build -o /wolfmqttbridge
 
 ############################
 # STEP 2 build a small image
